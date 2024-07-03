@@ -90,7 +90,7 @@ const ModalEditTeacher: React.FC<ModalProps> = ({
 			courseIds: selectedIds
 		};
 		const link = {
-			linkForPassword: 'http://localhost:5173/auth/newPassword'
+			linkForPassword: 'https://lms-js12-4kim.vercel.app/auth/newPassword'
 		};
 		await patchTeacher({ updateTeacher, deleteById, link });
 		setSelectedIds([]);

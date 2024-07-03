@@ -61,7 +61,7 @@ const ModalAddTeacher: FC<TeacherAddProps> = ({ open, handleClose }) => {
 		try {
 			const response = await postTeacher({
 				...data,
-				linkForPassword: 'http://localhost:5173/auth/newPassword'
+				linkForPassword: 'https://lms-js12-4kim.vercel.app/auth/newPassword'
 			}).unwrap();
 
 			if (response) {

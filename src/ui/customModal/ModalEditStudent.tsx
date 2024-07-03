@@ -159,7 +159,7 @@ const ModalEditStudent: FC<EditModalProps> = ({
 		);
 	};
 	const link = {
-		linkForPassword: 'http://localhost:5173/auth/newPassword'
+		linkForPassword: 'https://lms-js12-4kim.vercel.app/auth/newPassword'
 	};
 
 	const onSubmit = async (data: PatchStudentProps) => {
