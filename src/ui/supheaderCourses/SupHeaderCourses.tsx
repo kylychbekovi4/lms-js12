@@ -81,7 +81,7 @@ const SupHeaderCourses = () => {
 								alignItems: 'center'
 							}}
 						>
-							<img className={scss.profile} src={vector} alt="" />
+							<img src={vector} alt="" />
 							<p> Выйти</p>
 						</MenuItem>
 					</Menu>
@@ -122,7 +122,8 @@ const SupHeaderCourses = () => {
 								border: '1px solid #336fff',
 								width: '200px',
 								background: '#dde9f9',
-								borderRadius: '10px'
+								borderRadius: '10px',
+								paddingBottom:"20px"
 							}
 						}}
 					>
