@@ -7,23 +7,28 @@ type Props = {
 
 const ProtectedRoute: FC<Props> = ({ children }) => {
 	const navigate = useNavigate();
-
 	const role = localStorage.getItem('role');
 	const { pathname } = useLocation();
 
 	useEffect(() => {
-		if (role === 'ADMIN') {
-			navigate(`/admin/analytics`);
-		} else if (role === 'INSTRUCTOR') {
-			navigate(`/instructor/course`);
-		} else if (role === 'STUDENT') {
-			navigate(`/`);
-		} else if (role === null) {
-			navigate(`/auth/login`);
-		} else if (role === 'ADMIN' || pathname.startsWith(`/instructor/course`)) {
-			navigate('/admin/analytics');
+		if (!pathname.startsWith('/auth/newPassword')) {
+			// Добавляем условие для страницы сброса пароля
+			if (role === 'ADMIN') {
+				navigate(`/admin/analytics`);
+			} else if (role === 'INSTRUCTOR') {
+				navigate(`/instructor/course`);
+			} else if (role === 'STUDENT') {
+				navigate(`/`);
+			} else if (role === null) {
+				navigate(`/auth/login`);
+			} else if (
+				role === 'ADMIN' ||
+				pathname.startsWith(`/instructor/course`)
+			) {
+				navigate('/admin/analytics');
+			}
 		}
-	}, [role]);
+	}, [role, pathname, navigate]);
 
 	return children;
 };
