@@ -128,7 +128,7 @@ const ModalAddStudent: FC<StudentAddProps> = ({ open, handleClose }) => {
 		};
 
 		const newData = {
-			link: 'https://lms-js12-4kim.vercel.app/auth/newPassword'
+			link: 'https://lms-js12-imbt.vercel.app/auth/newPassword'
 		};
 
 		try {

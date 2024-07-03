@@ -52,7 +52,7 @@ const ModalPassword: FC<ModalPasswordProps> = ({ open, handleClose }) => {
 		const { email } = data;
 		const newData = {
 			email,
-			link: 'https://lms-js12-4kim.vercel.app/auth/newPassword'
+			link: 'https://lms-js12-imbt.vercel.app/auth/newPassword'
 		};
 		try {
 			await forgotPasswordMutation(newData).unwrap();

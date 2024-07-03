@@ -90,7 +90,7 @@ const ExcelModal: FC<SearchProps> = ({ handleClose, open }) => {
 			formData.append('file', selectedFile);
 
 			const newLink = {
-				link: 'https://lms-js12-4kim.vercel.app/auth/newPassword'
+				link: 'https://lms-js12-imbt.vercel.app/auth/newPassword'
 			};
 
 			try {
