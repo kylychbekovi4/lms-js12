@@ -6,7 +6,7 @@ import { IconClosed, IconOpen_Eye } from '@/src/assets/icons';
 import { IconButton, InputAdornment, InputLabel } from '@mui/material';
 import { FC, useState } from 'react';
 import { OutlinedInput } from '@mui/material';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 import { Controller, SubmitHandler, useForm } from 'react-hook-form';
 import ButtonSave from '@/src/ui/customButton/ButtonSave';
 import { useCreatePasswordMutation } from '@/src/redux/api/auth';
@@ -28,6 +28,7 @@ const NewPassword: FC = () => {
 	const [showPassword, setShowPassword] = useState<boolean>(false);
 	const [showSecondPassword, setShowSecondPassword] = useState<boolean>(false);
 	const [createPassword] = useCreatePasswordMutation();
+	const navigate = useNavigate();
 
 	const onSubmit: SubmitHandler<FormData> = async (data) => {
 		const newData = {
@@ -48,6 +49,7 @@ const NewPassword: FC = () => {
 			message: 'Успех',
 			description: 'Пароль успешно создан'
 		});
+		navigate(`/auth/login`);
 		reset();
 	};
 
