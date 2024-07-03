@@ -16,7 +16,7 @@ const ProtectedRoute: FC<Props> = ({ children }) => {
 			if (role === 'ADMIN') {
 				navigate(`/admin/analytics`);
 			} else if (role === 'INSTRUCTOR') {
-				navigate(`/instructor/course`);
+				navigate(`/instructor/course/`);
 			} else if (role === 'STUDENT') {
 				navigate(`/`);
 			} else if (role === null) {
